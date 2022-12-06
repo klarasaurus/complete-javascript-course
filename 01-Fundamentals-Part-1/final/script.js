@@ -108,7 +108,6 @@ const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > now - 2018); //true
 
-*/
 
 ////////////////////////////////////
 // Operator Precedence
@@ -124,31 +123,16 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
-/*
- */
 
 ////////////////////////////////////
 // Coding Challenge #1
-
-/*
-Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
-
-1. Store Mark's and John's mass and height in variables
-2. Calculate both their BMIs using the formula (you can even implement both versions)
-3. Create a boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
-
-TEST DATA 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
-TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
-
-GOOD LUCK 😀
-*/
 
 // const massMark = 78;
 // const heightMark = 1.69;
 // const massJohn = 92;
 // const heightJohn = 1.95;
 
-/*
+
 const massMark = 95;
 const heightMark = 1.88;
 const massJohn = 85;
@@ -160,14 +144,17 @@ const markHigherBMI = BMIMark > BMIJohn;
 
 console.log(BMIMark, BMIJohn, markHigherBMI);
 
+
+
 ////////////////////////////////////
 // Strings and Template Literals
-const firstName = 'Jonas';
-const job = 'teacher';
+const firstName = "Jonas";
+const job = "teacher";
 const birthYear = 1991;
-const year = 2037;
+const year = 2037;''
 
-const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+const jonas =
+  "I'm " + firstName + ", a " + (year - birthYear) + " year old " + job + "!";
 console.log(jonas);
 
 const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
@@ -175,9 +162,11 @@ console.log(jonasNew);
 
 console.log(`Just a regular string...`);
 
-console.log('String with \n\
+console.log(
+  "String with \n\
 multiple \n\
-lines');
+lines"
+);
 
 console.log(`String
 multiple
@@ -189,7 +178,7 @@ lines`);
 const age = 15;
 
 if (age >= 18) {
-  console.log('Sarah can start driving license 🚗');
+  console.log("Sarah can start driving license 🚗");
 } else {
   const yearsLeft = 18 - age;
   console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
@@ -204,6 +193,7 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
+
 */
 
 ////////////////////////////////////
@@ -241,27 +231,31 @@ if (BMIMark > BMIJohn) {
   console.log(`John's BMI (${BMIJohn}) is higher than Marks's (${BMIMark})!`)
 }
 
+
 ////////////////////////////////////
 // Type Conversion and Coercion
 
 // type conversion
-const inputYear = '1991';
+const inputYear = "1991";
 console.log(Number(inputYear), inputYear);
 console.log(Number(inputYear) + 18);
 
-console.log(Number('Jonas'));
+console.log(Number("Jonas"));
 console.log(typeof NaN);
 
 console.log(String(23), 23);
 
 // type coercion
-console.log('I am ' + 23 + ' years old');
-console.log('23' - '10' - 3);
-console.log('23' / '2');
+console.log("I am " + 23 + " years old"); // + turns number into string
+console.log("23" - "10" - 3); // - turns string into number
+console.log("23" / "2"); // / & * turns string to number
 
-let n = '1' + 1; // '11'
-n = n - 1;
-console.log(n);
+let n = "1" + 1; // '11'
+n = n - 1; // 11 - 1
+console.log(n); // 10
+console.log(2 + 3 + 4 + "5"); //95
+console.log("10" - "4" - "3" - 2 + "5"); //15
+*/
 
 ////////////////////////////////////
 // Truthy and Falsy Values
@@ -269,24 +263,27 @@ console.log(n);
 // 5 falsy values: 0, '', undefined, null, NaN
 console.log(Boolean(0));
 console.log(Boolean(undefined));
-console.log(Boolean('Jonas'));
+console.log(Boolean("Jonas"));
 console.log(Boolean({}));
-console.log(Boolean(''));
+console.log(Boolean(""));
 
 const money = 100;
 if (money) {
+  //true value
   console.log("Don't spend it all ;)");
 } else {
-  console.log('You should get a job!');
+  console.log("You should get a job!");
 }
 
 let height = 0;
 if (height) {
-  console.log('YAY! Height is defined');
+  //0 is falsy value
+  console.log("YAY! Height is defined");
 } else {
-  console.log('Height is UNDEFINED');
+  console.log("Height is UNDEFINED");
 }
 
+/*
 ////////////////////////////////////
 // Equality Operators: == vs. ===
 const age = '18';
