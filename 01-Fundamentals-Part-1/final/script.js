@@ -255,7 +255,7 @@ n = n - 1; // 11 - 1
 console.log(n); // 10
 console.log(2 + 3 + 4 + "5"); //95
 console.log("10" - "4" - "3" - 2 + "5"); //15
-*/
+
 
 ////////////////////////////////////
 // Truthy and Falsy Values
@@ -275,37 +275,37 @@ if (money) {
   console.log("You should get a job!");
 }
 
-let height = 0;
+let height;
 if (height) {
-  //0 is falsy value
+  //height is undefined (falsy value)
   console.log("YAY! Height is defined");
 } else {
   console.log("Height is UNDEFINED");
 }
 
-/*
+
 ////////////////////////////////////
 // Equality Operators: == vs. ===
-const age = '18';
-if (age === 18) console.log('You just became an adult :D (strict)');
-
-if (age == 18) console.log('You just became an adult :D (loose)');
+const age = "18";
+if (age === 18) console.log("You just became an adult :D (strict)"); //strict not equal
+if (age == 18) console.log("You just became an adult :D (loose)"); //loosly equal (avoid)
 
 const favourite = Number(prompt("What's your favourite number?"));
 console.log(favourite);
 console.log(typeof favourite);
 
-if (favourite === 23) { // 22 === 23 -> FALSE
-  console.log('Cool! 23 is an amzaing number!')
+if (favourite === 23) {
+  // 22 === 23 -> FALSE
+  console.log("Cool! 23 is an amzaing number!");
 } else if (favourite === 7) {
-  console.log('7 is also a cool number')
+  console.log("7 is also a cool number");
 } else if (favourite === 9) {
-  console.log('9 is also a cool number')
+  console.log("9 is also a cool number");
 } else {
-  console.log('Number is not 23 or 7 or 9')
+  console.log("Number is not 23 or 7 or 9");
 }
 
-if (favourite !== 23) console.log('Why not 23?');
+if (favourite !== 23) console.log("Why not 23?");
 
 ////////////////////////////////////
 // Logical Operators
@@ -330,7 +330,8 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
   console.log('Someone else should drive...');
 }
-*/
+
+
 
 ////////////////////////////////////
 // Coding Challenge #3
@@ -349,7 +350,7 @@ TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 GOOD LUCK 😀
-*/
+
 
 /*
 // const scoreDolphins = (96 + 108 + 89) / 3;
@@ -381,45 +382,47 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
 
 ////////////////////////////////////
 // The switch Statement
-const day = 'friday';
+const day = "friday";
 
 switch (day) {
-  case 'monday': // day === 'monday'
-    console.log('Plan course structure');
-    console.log('Go to coding meetup');
+  case "monday": // day === 'monday'
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
     break;
-  case 'tuesday':
-    console.log('Prepare theory videos');
+  case "tuesday":
+    console.log("Prepare theory videos");
     break;
-  case 'wednesday':
-  case 'thursday':
-    console.log('Write code examples');
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
     break;
-  case 'friday':
-    console.log('Record videos');
+  case "friday":
+    console.log("Record videos");
     break;
-  case 'saturday':
-  case 'sunday':
-    console.log('Enjoy the weekend :D');
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend :D");
     break;
   default:
-    console.log('Not a valid day!');
+    console.log("Not a valid day!");
 }
 
-if (day === 'monday') {
-  console.log('Plan course structure');
-  console.log('Go to coding meetup');
-} else if (day === 'tuesday') {
-  console.log('Prepare theory videos');
-} else if (day === 'wednesday' || day === 'thursday') {
-  console.log('Write code examples');
-} else if (day === 'friday') {
-  console.log('Record videos');
-} else if (day === 'saturday' || day === 'sunday') {
-  console.log('Enjoy the weekend :D');
+//using if-statement:
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend :D");
 } else {
-  console.log('Not a valid day!');
+  console.log("Not a valid day!");
 }
+
 
 ////////////////////////////////////
 // Statements and Expressions
@@ -431,27 +434,32 @@ if (23 > 10) {
   const str = '23 is bigger';
 }
 
+//expression produces value, which atatemtn does not
+
 const me = 'Jonas';
 console.log(`I'm ${2037 - 1991} years old ${me}`);
+
 
 ////////////////////////////////////
 // The Conditional (Ternary) Operator
 const age = 23;
 // age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
 
-const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
+const drink = age >= 18 ? "wine 🍷" : "water 💧"; //declare variable
 console.log(drink);
 
+//using if-statement:
 let drink2;
 if (age >= 18) {
-  drink2 = 'wine 🍷';
+  drink2 = "wine 🍷";
 } else {
-  drink2 = 'water 💧';
+  drink2 = "water 💧";
 }
 console.log(drink2);
 
-console.log(`I like to drink ${age >= 18 ? 'wine 🍷' : 'water 💧'}`);
-*/
+//ternary operator is an expression since it produces a value
+console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 💧"}`);
+
 
 ////////////////////////////////////
 // Coding Challenge #4
